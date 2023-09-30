@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 
 interface IThumbnailProps {
@@ -9,7 +10,7 @@ interface IThumbnailProps {
 
 export const Thumbnail = (props: IThumbnailProps) => {
   return (
-    <div className="relative">
+    <div className="relative h-40 w-40 bg-white">
       <Image
         className={props.className}
         src={props.src}
