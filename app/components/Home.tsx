@@ -1,5 +1,7 @@
 "use client";
+import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
+import getMovies, { GET_MOVIES_KEY } from "../api/services/movies.service";
 import SearchBar from "./SearchBar";
 
 // 1. setup HMTL
@@ -9,12 +11,25 @@ import SearchBar from "./SearchBar";
 // 5. filter results via search bar
 
 export const Home = () => {
-  const [query, setQuery] = useState("");
+  const {
+    data: movies,
+    refetch,
+    isLoading,
+    error,
+  } = useQuery(GET_MOVIES_KEY, getMovies);
+
   const [results, setResults] = useState([]);
 
   function handleResults(results: string) {
     // filter results
   }
+
+  if (isLoading) return <div>Loading...</div>;
+
+  if (error) return <div>Error loading data</div>;
+
+  console.log(movies);
+
   return (
     <main className="flex min-h-screen flex-col items-center p-24">
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm">
