@@ -4,7 +4,6 @@ import Image from "next/image";
 interface IThumbnailProps {
   src: string;
   alt: string;
-  className?: string;
   onClick?: () => void;
 }
 // TODO: define Movie components (Movie, thumbnail, MovieList)
@@ -13,9 +12,9 @@ const Thumbnail = (props: IThumbnailProps) => {
   return (
     <div className="relative h-40 w-40 bg-white">
       <Image
-        className={props.className}
         src={props.src}
         alt={props.alt}
+        fill
         objectFit="contain"
         onClick={props.onClick}
       />
