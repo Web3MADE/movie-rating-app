@@ -7,7 +7,8 @@ interface IThumbnailProps {
   className?: string;
   onClick?: () => void;
 }
-
+// TODO: define Movie components (Movie, thumbnail, MovieList)
+// create unit tests
 export const Thumbnail = (props: IThumbnailProps) => {
   return (
     <div className="relative h-40 w-40 bg-white">
