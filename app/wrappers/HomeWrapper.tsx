@@ -1,6 +1,6 @@
 import { QueryClient, dehydrate } from "@tanstack/react-query";
 import getMovies, { GET_MOVIES_KEY } from "../api/services/movies.service";
-import { Home } from "../components/Home";
+import Home from "../components/Home";
 import Hydrate from "../providers/Hydrate";
 
 export default async function HomeWrapper() {

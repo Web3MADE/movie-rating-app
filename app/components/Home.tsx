@@ -10,7 +10,7 @@ import SearchBar from "./SearchBar";
 // 4. add tanstack query
 // 5. filter results via search bar
 
-export const Home = () => {
+const Home = () => {
   const {
     data: movies,
     refetch,
@@ -42,3 +42,5 @@ export const Home = () => {
     </main>
   );
 };
+
+export default Home;

@@ -9,7 +9,7 @@ interface IThumbnailProps {
 }
 // TODO: define Movie components (Movie, thumbnail, MovieList)
 // create unit tests
-export const Thumbnail = (props: IThumbnailProps) => {
+const Thumbnail = (props: IThumbnailProps) => {
   return (
     <div className="relative h-40 w-40 bg-white">
       <Image
@@ -22,3 +22,5 @@ export const Thumbnail = (props: IThumbnailProps) => {
     </div>
   );
 };
+
+export default Thumbnail;

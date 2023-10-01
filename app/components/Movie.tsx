@@ -1,4 +1,4 @@
-import { Thumbnail } from "./Thumbnail";
+import Thumbnail from "./Thumbnail";
 
 interface IMovieProps {
   thumbnailSrc: string;
@@ -7,7 +7,7 @@ interface IMovieProps {
   onClick: () => void;
 }
 
-export const Movie = (props: IMovieProps) => {
+const Movie = (props: IMovieProps) => {
   return (
     <div className="movie-card">
       <Thumbnail src={props.thumbnailSrc} alt={props.title} />
@@ -17,3 +17,5 @@ export const Movie = (props: IMovieProps) => {
     </div>
   );
 };
+
+export default Movie;

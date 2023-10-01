@@ -1,5 +1,5 @@
 import { IMovie } from "../api/models";
-import { Movie } from "./Movie";
+import Movie from "./Movie";
 
 interface IMovieListProps {
   movies: IMovie[];
