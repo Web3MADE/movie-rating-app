@@ -1,7 +1,7 @@
 // add data prop?
 export interface IMovie {
   id: number;
-  rating: number;
+  rating: string;
   title: string;
   year: string;
   runtime: string;

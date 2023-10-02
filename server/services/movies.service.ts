@@ -6,7 +6,6 @@ export default async function getMovies() {
     const filteredData = data.movies.map((movie: IMovie) => {
       return {
         ...movie,
-        rating: (movie.rating = Math.floor(Math.random() * 5) + 1),
       };
     });
 

@@ -39,7 +39,7 @@ export const movieSchema: RxJsonSchema<IMovie> = {
       type: "string",
     },
     rating: {
-      type: "number",
+      type: "string",
     },
   },
   required: [
