@@ -1,9 +1,6 @@
 "use client";
-import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
-import getMovies, {
-  GET_MOVIES_KEY,
-} from "../../server/services/movies.service";
+import useMovies from "../hooks/useMovies";
 import MovieList from "./MovieList";
 import SearchBar from "./SearchBar";
 
@@ -14,12 +11,7 @@ import SearchBar from "./SearchBar";
 // 5. filter results via search bar
 
 const Home = () => {
-  const {
-    data: movies,
-    refetch,
-    isLoading,
-    error,
-  } = useQuery(GET_MOVIES_KEY, getMovies);
+  const { movies, isError, isLoading } = useMovies();
 
   const [results, setResults] = useState([]);
 
@@ -29,7 +21,7 @@ const Home = () => {
 
   if (isLoading) return <div>Loading...</div>;
 
-  if (error) return <div>Error loading data</div>;
+  if (isError) return <div>Error loading data</div>;
 
   return (
     <main className="flex min-h-screen flex-col items-center p-24">

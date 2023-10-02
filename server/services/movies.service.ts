@@ -19,5 +19,3 @@ export default async function getMovies() {
     console.log("error ", error);
   }
 }
-
-export const GET_MOVIES_KEY = ["GET_MOVIES"];
