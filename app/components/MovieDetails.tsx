@@ -1,4 +1,6 @@
+"use client";
 import MovieImage from "./MovieImage";
+import Rating from "./Rating";
 
 interface IMovieDetailsProps {
   title: string;
@@ -8,6 +10,7 @@ interface IMovieDetailsProps {
   averageRating: string;
   src: string;
   alt: string;
+  onSubmit: (rating: string) => void;
 }
 
 const MovieDetails = (props: IMovieDetailsProps) => {
@@ -24,6 +27,7 @@ const MovieDetails = (props: IMovieDetailsProps) => {
       <p className="text-xl text-white">
         Average Rating: {props.averageRating}
       </p>
+      <Rating rating={props.averageRating} onSubmit={props.onSubmit} />
     </>
   );
 };
