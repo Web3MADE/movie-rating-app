@@ -8,8 +8,6 @@ const MoviePage = () => {
   async function handleSubmit(newRating: string) {}
   return (
     <main className="flex min-h-screen flex-col items-center p-4">
-      <h1>Movie Page</h1>
-
       <div>
         <MovieDetails
           src={movie.posterUrl}
