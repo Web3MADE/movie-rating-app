@@ -1,7 +1,7 @@
 "use client";
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
-import getMovies, { GET_MOVIES_KEY } from "../api/services/movies.service";
+import getMovies, { GET_MOVIES_KEY } from "../server/services/movies.service";
 import MovieList from "./MovieList";
 import SearchBar from "./SearchBar";
 

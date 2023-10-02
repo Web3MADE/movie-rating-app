@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { IMovie } from "../api/models";
+import { IMovie } from "../server/models";
 import MovieList from "./MovieList";
 
 jest.mock("./Movie", () => {
