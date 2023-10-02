@@ -1,7 +1,8 @@
 "use client";
+import { IMovie } from "@/server/models/models";
 import { useState } from "react";
 import useMovies from "../hooks/useMovies";
-import MovieList from "./MovieList";
+import MovieCard from "./MovieCard";
 import SearchBar from "./SearchBar";
 
 // 1. setup HMTL
@@ -30,7 +31,19 @@ const HomePage = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-4 max-w-screen-md mx-auto">
-        {movies && <MovieList movies={movies} />}
+        {movies &&
+          movies.map((movie: IMovie) => (
+            <MovieCard
+              key={movie.id}
+              thumbnailSrc={movie.posterUrl}
+              thumbnailClassName="relative h-32 w-32"
+              title={movie.title}
+              averageRating={movie.rating}
+              onClick={() => {
+                // Handle view details action, like navigation or modal opening
+              }}
+            />
+          ))}
       </div>
     </main>
   );

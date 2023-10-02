@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import Movie from "./MovieCard";
+import MovieCard from "./MovieCard";
 
 describe("Movie Component", () => {
   const mockOnClick = jest.fn();
@@ -12,7 +12,7 @@ describe("Movie Component", () => {
   };
 
   beforeEach(() => {
-    render(<Movie {...movieProps} />);
+    render(<MovieCard {...movieProps} />);
   });
 
   it("should render thumbnail with correct alt text", () => {

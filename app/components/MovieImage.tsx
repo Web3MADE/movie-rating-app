@@ -1,16 +1,17 @@
 "use client";
 import Image from "next/image";
 
-interface IThumbnailProps {
+interface IMovieImageProps {
   src: string;
   alt: string;
+  className?: string;
   onClick?: () => void;
 }
-// TODO: define Movie components (Movie, thumbnail, MovieList)
+// TODO: define Movie components (Movie, MovieImage, MovieList)
 // create unit tests
-const Thumbnail = (props: IThumbnailProps) => {
+const MovieImage = (props: IMovieImageProps) => {
   return (
-    <div className="relative h-40 w-40 bg-white">
+    <div className={props.className}>
       <Image
         src={props.src}
         alt={props.alt}
@@ -22,4 +23,4 @@ const Thumbnail = (props: IThumbnailProps) => {
   );
 };
 
-export default Thumbnail;
+export default MovieImage;

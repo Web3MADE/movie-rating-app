@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import Thumbnail from "./Thumbnail";
+import Thumbnail from "./MovieImage";
 
 describe("Thumbnail Component", () => {
   const mockOnClick = jest.fn();
