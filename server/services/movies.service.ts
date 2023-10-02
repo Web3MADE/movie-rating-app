@@ -1,5 +1,5 @@
-import { data } from "../data";
-import { IMovie } from "../models";
+import { data } from "../models/data";
+import { IMovie } from "../models/models";
 // TODO: implement rxDB later, replace with NextReponse.json()
 export default async function getMovies() {
   try {

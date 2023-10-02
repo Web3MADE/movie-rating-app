@@ -1,5 +1,5 @@
 import { Controller, Get, Route } from "tsoa";
-import { IMovie } from "../models";
+import { IMovie } from "../models/models";
 import getMovies from "../services/movies.service";
 
 @Route("movies")

@@ -5,6 +5,7 @@ import express from "express";
 import * as swaggerUI from "swagger-ui-express";
 import { RegisterRoutes } from "./build/routes";
 import * as swaggerJson from "./build/swagger.json";
+import { init } from "./clients/database";
 
 export const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -15,9 +16,9 @@ app.use(
   swaggerUI.serve,
   swaggerUI.setup(swaggerJson)
 );
+init();
 
 const port = process.env.PORT || 9000;
 app.listen(port, () =>
   console.log(`Example app listening at http://localhost:${port}`)
 );
-
