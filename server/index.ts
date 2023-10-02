@@ -1,6 +1,7 @@
 // 1. create server
 // 2. generate routes with tsoa
 import bodyParser from "body-parser";
+import cors from "cors";
 import express from "express";
 import * as swaggerUI from "swagger-ui-express";
 import { RegisterRoutes } from "./build/routes";
@@ -8,6 +9,7 @@ import * as swaggerJson from "./build/swagger.json";
 import { getDatabase } from "./clients/database";
 
 export const app = express();
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 RegisterRoutes(app);
