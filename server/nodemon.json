@@ -1,0 +1,6 @@
+{
+  "exec": "ts-node index.ts",
+  "watch": ["*.ts"],
+  "ignore": ["build/*"],
+  "ext": "ts"
+}

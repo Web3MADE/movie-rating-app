@@ -1,7 +1,9 @@
 "use client";
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
-import getMovies, { GET_MOVIES_KEY } from "../server/services/movies.service";
+import getMovies, {
+  GET_MOVIES_KEY,
+} from "../../server/services/movies.service";
 import MovieList from "./MovieList";
 import SearchBar from "./SearchBar";
 
@@ -29,19 +31,18 @@ const Home = () => {
 
   if (error) return <div>Error loading data</div>;
 
-  if (movies)
-    return (
-      <main className="flex min-h-screen flex-col items-center p-24">
-        <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm">
-          <SearchBar onSearch={handleResults} />
-        </div>
+  return (
+    <main className="flex min-h-screen flex-col items-center p-24">
+      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm">
+        <SearchBar onSearch={handleResults} />
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-4 max-w-screen-md mx-auto">
-          <MovieList movies={movies} />
-          {/* TODO: output images  */}
-        </div>
-      </main>
-    );
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-4 max-w-screen-md mx-auto">
+        {movies && <MovieList movies={movies} />}
+        {/* TODO: output images  */}
+      </div>
+    </main>
+  );
 };
 
 export default Home;

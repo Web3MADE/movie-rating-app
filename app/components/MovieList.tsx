@@ -1,4 +1,4 @@
-import { IMovie } from "../server/models";
+import { IMovie } from "../../server/models";
 import Movie from "./Movie";
 
 interface IMovieListProps {
