@@ -1,4 +1,4 @@
-import { IMovie } from "../../server/models";
+import { IMovie } from "@/server/models/models";
 import Movie from "./Movie";
 
 interface IMovieListProps {
@@ -7,7 +7,7 @@ interface IMovieListProps {
 
 const MovieList = (props: IMovieListProps) => {
   return (
-    <div className="movie-list">
+    <>
       {props.movies.map((movie) => (
         <Movie
           key={movie.id}
@@ -19,7 +19,7 @@ const MovieList = (props: IMovieListProps) => {
           }}
         />
       ))}
-    </div>
+    </>
   );
 };
 

@@ -3,7 +3,7 @@ import Thumbnail from "./Thumbnail";
 interface IMovieProps {
   thumbnailSrc: string;
   title: string;
-  averageRating: number;
+  averageRating: string;
   onClick: () => void;
 }
 
