@@ -1,9 +1,11 @@
 import { RxCollection, RxDatabase, addRxPlugin, createRxDatabase } from "rxdb";
 import { RxDBDevModePlugin } from "rxdb/plugins/dev-mode";
+import { RxDBQueryBuilderPlugin } from "rxdb/plugins/query-builder";
 import { getRxStorageMemory } from "rxdb/plugins/storage-memory";
 import { data } from "../models/data";
 import { IMovie } from "../models/models";
 import { movieSchema } from "../models/schema";
+addRxPlugin(RxDBQueryBuilderPlugin);
 addRxPlugin(RxDBDevModePlugin);
 // instantiate db
 // add movies collection with schema

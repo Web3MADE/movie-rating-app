@@ -1108,7 +1108,7 @@ export const data: IData = {
       plot: "A hack screenwriter writes a screenplay for a former silent-film star who has faded into Hollywood obscurity.",
       posterUrl:
         "http://ia.media-imdb.com/images/M/MV5BMTc3NDYzODAwNV5BMl5BanBnXkFtZTgwODg1MTczMTE@._V1_SX300.jpg",
-      rating: "3",
+      rating: "5",
     },
     {
       id: 85,
@@ -1332,7 +1332,7 @@ export const data: IData = {
       plot: "At the close of WWII, a young nurse tends to a badly-burned plane crash victim. His past is shown in flashbacks, revealing an involvement in a fateful love affair.",
       posterUrl:
         "https://images-na.ssl-images-amazon.com/images/M/MV5BNDg2OTcxNDE0OF5BMl5BanBnXkFtZTgwOTg2MDM0MDE@._V1_SX300.jpg",
-      rating: "3",
+      rating: "5",
     },
     {
       id: 102,
