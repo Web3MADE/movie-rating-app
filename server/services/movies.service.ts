@@ -10,6 +10,7 @@ export default async function getMovies() {
       sortedMovies = await movieCollection
         .find()
         .sort({ rating: "desc" })
+        .limit(10)
         .exec();
     }
 
