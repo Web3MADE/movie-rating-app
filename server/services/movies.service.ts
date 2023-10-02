@@ -1,16 +1,26 @@
 import { getDatabase } from "../clients/database";
 import { IMovie } from "../models/models";
-// TODO: implement rxDB later, replace with NextReponse.json()
-export default async function getMovies() {
+
+export interface IGetMoviesProps {
+  page?: number;
+  limit?: number;
+}
+
+export default async function getMovies({
+  page = 1,
+  limit = 10,
+}: IGetMoviesProps) {
   try {
     const { movieCollection } = await getDatabase();
     let sortedMovies: IMovie[] = [];
 
     if (movieCollection) {
+      const skip = (page - 1) * limit;
       sortedMovies = await movieCollection
         .find()
         .sort({ rating: "desc" })
-        .limit(10)
+        .limit(limit)
+        .skip(skip)
         .exec();
     }
 
