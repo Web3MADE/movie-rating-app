@@ -6,10 +6,11 @@ export const movieSchema: RxJsonSchema<IMovie> = {
   description: "describes a simple movie",
   version: 0,
   type: "object",
-  primaryKey: "rating",
+  primaryKey: "id",
   properties: {
     id: {
-      type: "integer",
+      type: "string",
+      maxLength: 3,
     },
     title: {
       type: "string",
@@ -40,7 +41,6 @@ export const movieSchema: RxJsonSchema<IMovie> = {
     },
     rating: {
       type: "string",
-      maxLength: 1,
     },
   },
   required: [

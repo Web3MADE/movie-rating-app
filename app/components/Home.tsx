@@ -39,7 +39,6 @@ const Home = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-4 max-w-screen-md mx-auto">
         {movies && <MovieList movies={movies} />}
-        {/* TODO: output images  */}
       </div>
     </main>
   );

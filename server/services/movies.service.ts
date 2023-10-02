@@ -4,7 +4,6 @@ import { IMovie } from "../models/models";
 export default async function getMovies() {
   try {
     const { movieCollection } = await getDatabase();
-
     let sortedMovies: IMovie[] = [];
 
     if (movieCollection) {
@@ -13,6 +12,7 @@ export default async function getMovies() {
         .sort({ rating: "desc" })
         .exec();
     }
+
     return sortedMovies;
   } catch (error) {
     console.log("error ", error);

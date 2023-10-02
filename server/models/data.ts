@@ -3,7 +3,7 @@ import { IData } from "./models";
 export const data: IData = {
   movies: [
     {
-      id: 1,
+      id: "1",
       title: "Beetlejuice",
       year: "1988",
       runtime: "92",
@@ -16,7 +16,7 @@ export const data: IData = {
       rating: "5",
     },
     {
-      id: 2,
+      id: "2",
       title: "The Cotton Club",
       year: "1984",
       runtime: "127",
@@ -29,7 +29,7 @@ export const data: IData = {
       rating: "4",
     },
     {
-      id: 3,
+      id: "3",
       title: "The Shawshank Redemption",
       year: "1994",
       runtime: "142",
@@ -42,7 +42,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 4,
+      id: "4",
       title: "Crocodile Dundee",
       year: "1986",
       runtime: "97",
@@ -55,7 +55,7 @@ export const data: IData = {
       rating: "2",
     },
     {
-      id: 5,
+      id: "5",
       title: "Valkyrie",
       year: "2008",
       runtime: "121",
@@ -68,7 +68,7 @@ export const data: IData = {
       rating: "1",
     },
     {
-      id: 6,
+      id: "6",
       title: "Ratatouille",
       year: "2007",
       runtime: "111",
@@ -81,7 +81,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 7,
+      id: "7",
       title: "City of God",
       year: "2002",
       runtime: "130",
@@ -95,7 +95,7 @@ export const data: IData = {
       rating: "4",
     },
     {
-      id: 8,
+      id: "8",
       title: "Memento",
       year: "2000",
       runtime: "113",
@@ -108,7 +108,7 @@ export const data: IData = {
       rating: "2",
     },
     {
-      id: 9,
+      id: "9",
       title: "The Intouchables",
       year: "2011",
       runtime: "112",
@@ -121,7 +121,7 @@ export const data: IData = {
       rating: "5",
     },
     {
-      id: 10,
+      id: "10",
       title: "Stardust",
       year: "2007",
       runtime: "127",
@@ -134,7 +134,7 @@ export const data: IData = {
       rating: "1",
     },
     {
-      id: 11,
+      id: "11",
       title: "Apocalypto",
       year: "2006",
       runtime: "139",
@@ -148,7 +148,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 12,
+      id: "12",
       title: "Taxi Driver",
       year: "1976",
       runtime: "113",
@@ -161,7 +161,7 @@ export const data: IData = {
       rating: "4",
     },
     {
-      id: 13,
+      id: "13",
       title: "No Country for Old Men",
       year: "2007",
       runtime: "122",
@@ -174,7 +174,7 @@ export const data: IData = {
       rating: "2",
     },
     {
-      id: 14,
+      id: "14",
       title: "Planet 51",
       year: "2009",
       runtime: "91",
@@ -187,7 +187,7 @@ export const data: IData = {
       rating: "1",
     },
     {
-      id: 15,
+      id: "15",
       title: "Looper",
       year: "2012",
       runtime: "119",
@@ -200,7 +200,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 16,
+      id: "16",
       title: "Corpse Bride",
       year: "2005",
       runtime: "77",
@@ -213,7 +213,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 17,
+      id: "17",
       title: "The Third Man",
       year: "1949",
       runtime: "93",
@@ -226,7 +226,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 18,
+      id: "18",
       title: "The Beach",
       year: "2000",
       runtime: "119",
@@ -240,7 +240,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 19,
+      id: "19",
       title: "Scarface",
       year: "1983",
       runtime: "170",
@@ -254,7 +254,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 20,
+      id: "20",
       title: "Sid and Nancy",
       year: "1986",
       runtime: "112",
@@ -267,7 +267,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 21,
+      id: "21",
       title: "Black Swan",
       year: "2010",
       runtime: "108",
@@ -280,7 +280,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 22,
+      id: "22",
       title: "Inception",
       year: "2010",
       runtime: "148",
@@ -293,7 +293,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 23,
+      id: "23",
       title: "The Deer Hunter",
       year: "1978",
       runtime: "183",
@@ -306,7 +306,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 24,
+      id: "24",
       title: "Chasing Amy",
       year: "1997",
       runtime: "113",
@@ -319,7 +319,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 25,
+      id: "25",
       title: "Django Unchained",
       year: "2012",
       runtime: "165",
@@ -333,7 +333,7 @@ export const data: IData = {
       rating: "5",
     },
     {
-      id: 26,
+      id: "26",
       title: "The Silence of the Lambs",
       year: "1991",
       runtime: "118",
@@ -347,7 +347,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 27,
+      id: "27",
       title: "American Beauty",
       year: "1999",
       runtime: "122",
@@ -360,7 +360,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 28,
+      id: "28",
       title: "Snatch",
       year: "2000",
       runtime: "102",
@@ -373,7 +373,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 29,
+      id: "29",
       title: "Midnight Express",
       year: "1978",
       runtime: "121",
@@ -386,7 +386,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 30,
+      id: "30",
       title: "Pulp Fiction",
       year: "1994",
       runtime: "154",
@@ -399,7 +399,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 31,
+      id: "31",
       title: "Lock, Stock and Two Smoking Barrels",
       year: "1998",
       runtime: "107",
@@ -412,7 +412,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 32,
+      id: "32",
       title: "Lucky Number Slevin",
       year: "2006",
       runtime: "110",
@@ -425,7 +425,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 33,
+      id: "33",
       title: "Rear Window",
       year: "1954",
       runtime: "112",
@@ -438,7 +438,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 34,
+      id: "34",
       title: "Pan's Labyrinth",
       year: "2006",
       runtime: "118",
@@ -451,7 +451,7 @@ export const data: IData = {
     },
 
     {
-      id: 35,
+      id: "35",
       title: "Shutter Island",
       year: "2010",
       runtime: "138",
@@ -464,7 +464,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 36,
+      id: "36",
       title: "Reservoir Dogs",
       year: "1992",
       runtime: "99",
@@ -477,7 +477,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 37,
+      id: "37",
       title: "The Shining",
       year: "1980",
       runtime: "146",
@@ -490,7 +490,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 38,
+      id: "38",
       title: "Midnight in Paris",
       year: "2011",
       runtime: "94",
@@ -503,7 +503,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 39,
+      id: "39",
       title: "Les Misérables",
       year: "2012",
       runtime: "158",
@@ -516,7 +516,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 40,
+      id: "40",
       title: "L.A. Confidential",
       year: "1997",
       runtime: "138",
@@ -529,7 +529,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 41,
+      id: "41",
       title: "Moneyball",
       year: "2011",
       runtime: "133",
@@ -542,7 +542,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 42,
+      id: "42",
       title: "The Hangover",
       year: "2009",
       runtime: "100",
@@ -555,7 +555,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 43,
+      id: "43",
       title: "The Great Beauty",
       year: "2013",
       runtime: "141",
@@ -568,7 +568,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 44,
+      id: "44",
       title: "Gran Torino",
       year: "2008",
       runtime: "116",
@@ -581,7 +581,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 45,
+      id: "45",
       title: "Mary and Max",
       year: "2009",
       runtime: "92",
@@ -595,7 +595,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 46,
+      id: "46",
       title: "Flight",
       year: "2012",
       runtime: "138",
@@ -609,7 +609,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 47,
+      id: "47",
       title: "One Flew Over the Cuckoo's Nest",
       year: "1975",
       runtime: "133",
@@ -622,7 +622,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 48,
+      id: "48",
       title: "Requiem for a Dream",
       year: "2000",
       runtime: "102",
@@ -635,7 +635,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 49,
+      id: "49",
       title: "The Truman Show",
       year: "1998",
       runtime: "103",
@@ -648,7 +648,7 @@ export const data: IData = {
       rating: "5",
     },
     {
-      id: 50,
+      id: "50",
       title: "The Artist",
       year: "2011",
       runtime: "100",
@@ -661,7 +661,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 51,
+      id: "51",
       title: "Forrest Gump",
       year: "1994",
       runtime: "142",
@@ -675,7 +675,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 52,
+      id: "52",
       title: "The Hobbit: The Desolation of Smaug",
       year: "2013",
       runtime: "161",
@@ -688,7 +688,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 53,
+      id: "53",
       title: "Vicky Cristina Barcelona",
       year: "2008",
       runtime: "96",
@@ -702,7 +702,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 54,
+      id: "54",
       title: "Slumdog Millionaire",
       year: "2008",
       runtime: "120",
@@ -715,7 +715,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 55,
+      id: "55",
       title: "Lost in Translation",
       year: "2003",
       runtime: "101",
@@ -729,7 +729,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 56,
+      id: "56",
       title: "Match Point",
       year: "2005",
       runtime: "119",
@@ -743,7 +743,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 57,
+      id: "57",
       title: "Psycho",
       year: "1960",
       runtime: "109",
@@ -756,7 +756,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 58,
+      id: "58",
       title: "North by Northwest",
       year: "1959",
       runtime: "136",
@@ -769,7 +769,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 59,
+      id: "59",
       title: "Madagascar: Escape 2 Africa",
       year: "2008",
       runtime: "89",
@@ -782,7 +782,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 60,
+      id: "60",
       title: "Despicable Me 2",
       year: "2013",
       runtime: "98",
@@ -795,7 +795,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 61,
+      id: "61",
       title: "Downfall",
       year: "2004",
       runtime: "156",
@@ -809,7 +809,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 62,
+      id: "62",
       title: "Madagascar",
       year: "2005",
       runtime: "86",
@@ -822,7 +822,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 63,
+      id: "63",
       title: "Madagascar 3: Europe's Most Wanted",
       year: "2012",
       runtime: "93",
@@ -835,7 +835,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 64,
+      id: "64",
       title: "God Bless America",
       year: "2011",
       runtime: "105",
@@ -849,7 +849,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 65,
+      id: "65",
       title: "The Social Network",
       year: "2010",
       runtime: "120",
@@ -862,7 +862,7 @@ export const data: IData = {
       rating: "5",
     },
     {
-      id: 66,
+      id: "66",
       title: "The Pianist",
       year: "2002",
       runtime: "150",
@@ -875,7 +875,7 @@ export const data: IData = {
       rating: "5",
     },
     {
-      id: 67,
+      id: "67",
       title: "Alive",
       year: "1993",
       runtime: "120",
@@ -888,7 +888,7 @@ export const data: IData = {
     },
 
     {
-      id: 68,
+      id: "68",
       title: "Casablanca",
       year: "1942",
       runtime: "102",
@@ -901,7 +901,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 69,
+      id: "69",
       title: "American Gangster",
       year: "2007",
       runtime: "157",
@@ -914,7 +914,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 70,
+      id: "70",
       title: "Catch Me If You Can",
       year: "2002",
       runtime: "141",
@@ -927,7 +927,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 71,
+      id: "71",
       title: "American History X",
       year: "1998",
       runtime: "119",
@@ -940,7 +940,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 72,
+      id: "72",
       title: "Casino",
       year: "1995",
       runtime: "178",
@@ -953,7 +953,7 @@ export const data: IData = {
       rating: "4",
     },
     {
-      id: 73,
+      id: "73",
       title: "Pirates of the Caribbean: At World's End",
       year: "2007",
       runtime: "169",
@@ -966,7 +966,7 @@ export const data: IData = {
       rating: "4",
     },
     {
-      id: 74,
+      id: "74",
       title: "Pirates of the Caribbean: On Stranger Tides",
       year: "2011",
       runtime: "136",
@@ -979,7 +979,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 75,
+      id: "75",
       title: "Crash",
       year: "2004",
       runtime: "112",
@@ -992,7 +992,7 @@ export const data: IData = {
       rating: "4",
     },
     {
-      id: 76,
+      id: "76",
       title: "Pirates of the Caribbean: The Curse of the Black Pearl",
       year: "2003",
       runtime: "143",
@@ -1005,7 +1005,7 @@ export const data: IData = {
       rating: "4",
     },
     {
-      id: 77,
+      id: "77",
       title: "The Lord of the Rings: The Return of the King",
       year: "2003",
       runtime: "201",
@@ -1018,7 +1018,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 78,
+      id: "78",
       title: "Oldboy",
       year: "2003",
       runtime: "120",
@@ -1031,7 +1031,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 79,
+      id: "79",
       title: "Chocolat",
       year: "2000",
       runtime: "121",
@@ -1045,7 +1045,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 80,
+      id: "80",
       title: "Casino Royale",
       year: "2006",
       runtime: "144",
@@ -1058,7 +1058,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 81,
+      id: "81",
       title: "WALL·E",
       year: "2008",
       runtime: "98",
@@ -1071,7 +1071,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 82,
+      id: "82",
       title: "The Wolf of Wall Street",
       year: "2013",
       runtime: "180",
@@ -1085,7 +1085,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 83,
+      id: "83",
       title: "Hellboy II: The Golden Army",
       year: "2008",
       runtime: "120",
@@ -1098,7 +1098,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 84,
+      id: "84",
       title: "Sunset Boulevard",
       year: "1950",
       runtime: "110",
@@ -1111,7 +1111,7 @@ export const data: IData = {
       rating: "5",
     },
     {
-      id: 85,
+      id: "85",
       title: "I-See-You.Com",
       year: "2006",
       runtime: "92",
@@ -1124,7 +1124,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 86,
+      id: "86",
       title: "The Grand Budapest Hotel",
       year: "2014",
       runtime: "99",
@@ -1137,7 +1137,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 87,
+      id: "87",
       title: "The Hitchhiker's Guide to the Galaxy",
       year: "2005",
       runtime: "109",
@@ -1150,7 +1150,7 @@ export const data: IData = {
       rating: "4",
     },
     {
-      id: 88,
+      id: "88",
       title: "Once Upon a Time in America",
       year: "1984",
       runtime: "229",
@@ -1163,7 +1163,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 89,
+      id: "89",
       title: "Oblivion",
       year: "2013",
       runtime: "124",
@@ -1176,7 +1176,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 90,
+      id: "90",
       title: "V for Vendetta",
       year: "2005",
       runtime: "132",
@@ -1189,7 +1189,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 91,
+      id: "91",
       title: "Gattaca",
       year: "1997",
       runtime: "106",
@@ -1202,7 +1202,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 92,
+      id: "92",
       title: "Silver Linings Playbook",
       year: "2012",
       runtime: "122",
@@ -1215,7 +1215,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 93,
+      id: "93",
       title: "Alice in Wonderland",
       year: "2010",
       runtime: "108",
@@ -1229,7 +1229,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 94,
+      id: "94",
       title: "Gandhi",
       year: "1982",
       runtime: "191",
@@ -1242,7 +1242,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 95,
+      id: "95",
       title: "Pacific Rim",
       year: "2013",
       runtime: "131",
@@ -1255,7 +1255,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 96,
+      id: "96",
       title: "Kiss Kiss Bang Bang",
       year: "2005",
       runtime: "103",
@@ -1269,7 +1269,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 97,
+      id: "97",
       title: "The Quiet American",
       year: "2002",
       runtime: "101",
@@ -1282,7 +1282,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 98,
+      id: "98",
       title: "Cloud Atlas",
       year: "2012",
       runtime: "172",
@@ -1295,7 +1295,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 99,
+      id: "99",
       title: "The Impossible",
       year: "2012",
       runtime: "114",
@@ -1308,7 +1308,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 100,
+      id: "100",
       title: "All Quiet on the Western Front",
       year: "1930",
       runtime: "136",
@@ -1321,7 +1321,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 101,
+      id: "101",
       title: "The English Patient",
       year: "1996",
       runtime: "162",
@@ -1335,7 +1335,7 @@ export const data: IData = {
       rating: "5",
     },
     {
-      id: 102,
+      id: "102",
       title: "Dallas Buyers Club",
       year: "2013",
       runtime: "117",
@@ -1348,7 +1348,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 103,
+      id: "103",
       title: "Frida",
       year: "2002",
       runtime: "123",
@@ -1361,7 +1361,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 104,
+      id: "104",
       title: "Before Sunrise",
       year: "1995",
       runtime: "105",
@@ -1374,7 +1374,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 105,
+      id: "105",
       title: "The Rum Diary",
       year: "2011",
       runtime: "120",
@@ -1387,7 +1387,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 106,
+      id: "106",
       title: "The Last Samurai",
       year: "2003",
       runtime: "154",
@@ -1400,7 +1400,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 107,
+      id: "107",
       title: "Chinatown",
       year: "1974",
       runtime: "130",
@@ -1413,7 +1413,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 108,
+      id: "108",
       title: "Calvary",
       year: "2014",
       runtime: "102",
@@ -1426,7 +1426,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 109,
+      id: "109",
       title: "Before Sunset",
       year: "2004",
       runtime: "80",
@@ -1440,7 +1440,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 110,
+      id: "110",
       title: "Spirited Away",
       year: "2001",
       runtime: "125",
@@ -1453,7 +1453,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 111,
+      id: "111",
       title: "Indochine",
       year: "1992",
       runtime: "159",
@@ -1466,7 +1466,7 @@ export const data: IData = {
       rating: "4",
     },
     {
-      id: 112,
+      id: "112",
       title: "Birdman or (The Unexpected Virtue of Ignorance)",
       year: "2014",
       runtime: "119",
@@ -1479,7 +1479,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 113,
+      id: "113",
       title: "Boyhood",
       year: "2014",
       runtime: "165",
@@ -1493,7 +1493,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 114,
+      id: "114",
       title: "12 Angry Men",
       year: "1957",
       runtime: "96",
@@ -1506,7 +1506,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 115,
+      id: "115",
       title: "The Imitation Game",
       year: "2014",
       runtime: "114",
@@ -1520,7 +1520,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 116,
+      id: "116",
       title: "Interstellar",
       year: "2014",
       runtime: "169",
@@ -1533,7 +1533,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 117,
+      id: "117",
       title: "Big Nothing",
       year: "2006",
       runtime: "86",
@@ -1546,7 +1546,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 118,
+      id: "118",
       title: "Das Boot",
       year: "1981",
       runtime: "149",
@@ -1560,7 +1560,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 119,
+      id: "119",
       title: "Shrek 2",
       year: "2004",
       runtime: "93",
@@ -1573,7 +1573,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 120,
+      id: "120",
       title: "Sin City",
       year: "2005",
       runtime: "124",
@@ -1586,7 +1586,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 121,
+      id: "121",
       title: "Nebraska",
       year: "2013",
       runtime: "115",
@@ -1599,7 +1599,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 122,
+      id: "122",
       title: "Shrek",
       year: "2001",
       runtime: "90",
@@ -1612,7 +1612,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 123,
+      id: "123",
       title: "Mr. & Mrs. Smith",
       year: "2005",
       runtime: "120",
@@ -1625,7 +1625,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 124,
+      id: "124",
       title: "Original Sin",
       year: "2001",
       runtime: "116",
@@ -1638,7 +1638,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 125,
+      id: "125",
       title: "Shrek Forever After",
       year: "2010",
       runtime: "93",
@@ -1651,7 +1651,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 126,
+      id: "126",
       title: "Before Midnight",
       year: "2013",
       runtime: "109",
@@ -1665,7 +1665,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 127,
+      id: "127",
       title: "Despicable Me",
       year: "2010",
       runtime: "95",
@@ -1678,7 +1678,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 128,
+      id: "128",
       title: "Troy",
       year: "2004",
       runtime: "163",
@@ -1691,7 +1691,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 129,
+      id: "129",
       title: "The Hobbit: An Unexpected Journey",
       year: "2012",
       runtime: "169",
@@ -1704,7 +1704,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 130,
+      id: "130",
       title: "The Great Gatsby",
       year: "2013",
       runtime: "143",
@@ -1717,7 +1717,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 131,
+      id: "131",
       title: "Ice Age",
       year: "2002",
       runtime: "81",
@@ -1730,7 +1730,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 132,
+      id: "132",
       title: "The Lord of the Rings: The Fellowship of the Ring",
       year: "2001",
       runtime: "178",
@@ -1743,7 +1743,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 133,
+      id: "133",
       title: "The Lord of the Rings: The Two Towers",
       year: "2002",
       runtime: "179",
@@ -1756,7 +1756,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 134,
+      id: "134",
       title: "Ex Machina",
       year: "2015",
       runtime: "108",
@@ -1769,7 +1769,7 @@ export const data: IData = {
       rating: "4",
     },
     {
-      id: 135,
+      id: "135",
       title: "The Theory of Everything",
       year: "2014",
       runtime: "123",
@@ -1782,7 +1782,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 136,
+      id: "136",
       title: "Shogun",
       year: "1980",
       runtime: "60",
@@ -1796,7 +1796,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 137,
+      id: "137",
       title: "Spotlight",
       year: "2015",
       runtime: "128",
@@ -1809,7 +1809,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 138,
+      id: "138",
       title: "Vertigo",
       year: "1958",
       runtime: "128",
@@ -1822,7 +1822,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 139,
+      id: "139",
       title: "Whiplash",
       year: "2014",
       runtime: "107",
@@ -1835,7 +1835,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 140,
+      id: "140",
       title: "The Lives of Others",
       year: "2006",
       runtime: "137",
@@ -1848,7 +1848,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 141,
+      id: "141",
       title: "Hotel Rwanda",
       year: "2004",
       runtime: "121",
@@ -1861,7 +1861,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 142,
+      id: "142",
       title: "The Martian",
       year: "2015",
       runtime: "144",
@@ -1874,7 +1874,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 143,
+      id: "143",
       title: "To Kill a Mockingbird",
       year: "1962",
       runtime: "129",
@@ -1887,7 +1887,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 144,
+      id: "144",
       title: "The Hateful Eight",
       year: "2015",
       runtime: "187",
@@ -1901,7 +1901,7 @@ export const data: IData = {
       rating: "4",
     },
     {
-      id: 145,
+      id: "145",
       title: "A Separation",
       year: "2011",
       runtime: "123",
@@ -1914,7 +1914,7 @@ export const data: IData = {
       rating: "3",
     },
     {
-      id: 146,
+      id: "146",
       title: "The Big Short",
       year: "2015",
       runtime: "130",
