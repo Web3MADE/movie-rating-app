@@ -6,10 +6,7 @@ export interface IGetMoviesProps {
   limit?: number;
 }
 
-export default async function getMovies({
-  page = 1,
-  limit = 10,
-}: IGetMoviesProps) {
+export async function getMovies({ page = 1, limit = 10 }: IGetMoviesProps) {
   try {
     const { movieCollection } = await getDatabase();
     let sortedMovies: IMovie[] = [];
@@ -25,6 +22,27 @@ export default async function getMovies({
     }
 
     return sortedMovies;
+  } catch (error) {
+    console.log("error ", error);
+  }
+}
+
+export async function getMovie(id: string) {
+  try {
+    const { movieCollection } = await getDatabase();
+    let movie: IMovie | null = null;
+
+    if (movieCollection) {
+      movie = await movieCollection
+        .findOne({
+          selector: {
+            id: id,
+          },
+        })
+        .exec();
+    }
+
+    return movie;
   } catch (error) {
     console.log("error ", error);
   }
