@@ -10,7 +10,7 @@ import SearchBar from "./SearchBar";
 // 4. add tanstack query
 // 5. filter results via search bar
 
-const Home = () => {
+const HomePage = () => {
   const { movies, isError, isLoading } = useMovies();
 
   const [results, setResults] = useState([]);
@@ -36,4 +36,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;

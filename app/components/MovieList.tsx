@@ -1,5 +1,5 @@
 import { IMovie } from "@/server/models/models";
-import Movie from "./Movie";
+import Movie from "./MovieCard";
 
 interface IMovieListProps {
   movies: IMovie[];

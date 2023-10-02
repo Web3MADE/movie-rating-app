@@ -1,6 +1,6 @@
 import { QueryClient, dehydrate } from "@tanstack/react-query";
 
-import Home from "../components/Home";
+import Home from "../components/HomePage";
 import { GET_MOVIES_KEY, getMovies } from "../hooks/useMovies";
 import Hydrate from "../providers/Hydrate";
 

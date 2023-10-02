@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import Movie from "./Movie";
+import Movie from "./MovieCard";
 
 describe("Movie Component", () => {
   const mockOnClick = jest.fn();

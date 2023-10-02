@@ -7,9 +7,9 @@ interface IMovieProps {
   onClick: () => void;
 }
 
-const Movie = (props: IMovieProps) => {
+const MovieCard = (props: IMovieProps) => {
   return (
-    <div className="movie-card">
+    <div className="">
       <Thumbnail src={props.thumbnailSrc} alt={props.title} />
       <h3>{props.title}</h3>
       <p>Average Rating: {props.averageRating}</p>
@@ -18,4 +18,4 @@ const Movie = (props: IMovieProps) => {
   );
 };
 
-export default Movie;
+export default MovieCard;
