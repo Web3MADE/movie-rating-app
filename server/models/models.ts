@@ -13,6 +13,5 @@ export interface IMovie {
 }
 
 export interface IData {
-  genres: string[];
   movies: IMovie[];
 }
