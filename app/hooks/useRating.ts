@@ -6,22 +6,19 @@ interface IRateMovie {
   rating: string;
 }
 export const rateMovie = async ({ id, rating }: IRateMovie) => {
-  console.log(id, rating);
-  const res = await fetch(`http://localhost:9000/ratings/${id}`, {
+  await fetch(`http://localhost:9000/ratings/${id}`, {
     method: "PUT",
     body: JSON.stringify({ rating: rating }),
     headers: {
       "Content-Type": "application/json",
     },
   });
-
-  return res.json();
 };
 
-export default function useRating() {
+export default function useRating(id: string) {
   const queryClient = useQueryClient();
   const mutation = useMutation(rateMovie, {
-    onSuccess: () => queryClient.invalidateQueries(GET_MOVIE_KEY),
+    onSuccess: () => queryClient.invalidateQueries([GET_MOVIE_KEY, id]),
   });
 
   const rate = (id: string, rating: string) => {

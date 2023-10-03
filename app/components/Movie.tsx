@@ -19,7 +19,7 @@ const Movie = ({ id }: IMovieProps) => {
     rate,
     isError: isRatingError,
     isLoading: isLoadingError,
-  } = useRating();
+  } = useRating(id);
   const router = useRouter();
 
   function handleNavigateBack() {
