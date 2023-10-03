@@ -20,6 +20,8 @@ const Home = () => {
     // filter results
   }
 
+  function handleClick(id: string) {}
+
   if (isLoading) return <div>Loading...</div>;
 
   if (isError) return <div>Error loading data</div>;
@@ -35,12 +37,13 @@ const Home = () => {
           movies.map((movie: IMovie) => (
             <MovieCard
               key={movie.id}
+              id={movie.id}
               thumbnailSrc={movie.posterUrl}
               thumbnailClassName="relative h-32 w-32"
               title={movie.title}
               averageRating={movie.rating}
-              onClick={() => {
-                // Handle view details action, like navigation or modal opening
+              onClick={(id: string) => {
+                handleClick(id);
               }}
             />
           ))}
