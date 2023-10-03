@@ -34,7 +34,7 @@ const Home = (props: IHomeWrapperProps) => {
   return (
     <main className="flex min-h-screen flex-col items-center p-24 gap-4">
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm">
-        <SearchBar onSearch={handleResults} />
+        <SearchBar search={props.search} />
       </div>
 
       <div className="flex gap-4 mx-auto">
