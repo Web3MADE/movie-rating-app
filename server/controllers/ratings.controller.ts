@@ -1,12 +1,13 @@
-import { Controller, Path, Post, Route } from "tsoa";
+import { Body, Controller, Path, Put, Route } from "tsoa";
 import { rateMovie } from "../services/ratings.service";
 
+// TODO: fix 404 error
 @Route("ratings")
 export class RatingsController extends Controller {
-  @Post("{id}/rate/{rating}")
+  @Put("{id}")
   public async rateMovie(
     @Path() id: string,
-    @Path() rating: string
+    @Body() rating: string
   ): Promise<void> {
     try {
       await rateMovie(id, rating);
