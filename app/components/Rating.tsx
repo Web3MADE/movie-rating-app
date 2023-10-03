@@ -1,6 +1,6 @@
 "use client";
+import clsx from "clsx";
 import { useState } from "react";
-
 interface IRatingProps {
   averageRating: string;
   onSubmit: (rating: string) => void;
@@ -19,9 +19,10 @@ const Rating = (props: IRatingProps) => {
         {[1, 2, 3, 4, 5].map((star) => (
           <span
             key={star}
-            className={`cursor-pointer ${
-              star <= Number(rating) ? "text-yellow-500" : "text-gray-500"
-            }`}
+            className={clsx("cursor-pointer", {
+              "text-yellow-500": star <= Number(rating),
+              "text-gray-500": star > Number(rating),
+            })}
             onClick={() => handleRating(star)}
           >
             ★
