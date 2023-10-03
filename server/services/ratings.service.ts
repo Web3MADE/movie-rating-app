@@ -1,10 +1,10 @@
 import { getDatabase } from "../clients/database";
 
+// TODO: fix upsert dev error
 export async function rateMovie(id: string, rating: string) {
   try {
     const { movieCollection } = await getDatabase();
     let movie = null;
-    console.log("movieCollection ", movieCollection);
     if (movieCollection) {
       movie = await movieCollection
         .findOne({
@@ -14,14 +14,29 @@ export async function rateMovie(id: string, rating: string) {
         })
         .exec();
       if (movie) {
-        console.log("movie selected ", movie);
+        const movieData = movie.toJSON(); // Convert RxDocument to plain object
+        // spread to avoid mutation
+        // fix readOnly string array error with genres
         await movieCollection.upsert({
-          ...movie,
+          ...movieData,
           rating: rating,
+          genres: [...movieData.genres],
         });
+
+        // Keep temporarily for upsert reference
+        movie = await movieCollection
+          .findOne({
+            selector: {
+              id: id,
+            },
+          })
+          .exec()
+          .then((doc) => {
+            console.log("updated movie ", doc?.toJSON());
+          });
       }
     }
-    console.log("movie ", movie);
+
     return movie;
   } catch (error) {
     console.log("error ", error);
