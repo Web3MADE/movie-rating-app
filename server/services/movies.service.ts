@@ -2,7 +2,6 @@ import { getDatabase } from "../clients/database";
 import { IGetMoviesQueryParams } from "../controllers/movies.controller";
 import { IMovie } from "../models/models";
 
-// TODO: don't do sorting in-memory, do in database
 export async function getMovies({
   page = 1,
   limit = 10,
@@ -14,7 +13,6 @@ export async function getMovies({
 
     if (movieCollection) {
       const regexp = new RegExp(`.*${search}.*`, "i");
-      console.log(regexp);
 
       movies = await movieCollection
         .find({
