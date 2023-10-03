@@ -1,5 +1,5 @@
 "use client";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import { useDebounce } from "use-debounce";
 import SearchIcon from "./SearchIcon";
@@ -8,11 +8,14 @@ interface ISearchBarProps {
   search?: string;
 }
 
+// TODO: reimplement submbit button for better UX
 const SearchBar = (props: ISearchBarProps) => {
   const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
 
   const [text, setText] = useState(props.search);
-  const [query] = useDebounce(text, 250);
+  const [query] = useDebounce(text, 500);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setText(event.target.value);
@@ -24,14 +27,16 @@ const SearchBar = (props: ISearchBarProps) => {
   };
 
   useEffect(() => {
+    if (query === undefined) return;
     if (!query) {
-      router.push(`/movies`);
+      if (pathname !== "/movies" || searchParams) {
+        router.push("/movies");
+      }
     } else {
       router.push(`/movies?search=${query}`);
     }
-  }, [query]);
+  }, [query, router, pathname]);
 
-  console.log("text ", text);
   return (
     <div className="flex items-center border-b-2 border-teal-500 py-2">
       <SearchIcon />
