@@ -20,8 +20,6 @@ const Home = () => {
     // filter results
   }
 
-  function handleClick(id: string) {}
-
   if (isLoading) return <div>Loading...</div>;
 
   if (isError) return <div>Error loading data</div>;
@@ -42,9 +40,6 @@ const Home = () => {
               thumbnailClassName="relative h-32 w-32"
               title={movie.title}
               averageRating={movie.rating}
-              onClick={(id: string) => {
-                handleClick(id);
-              }}
             />
           ))}
       </div>
