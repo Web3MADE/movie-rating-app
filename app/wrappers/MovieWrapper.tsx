@@ -1,18 +1,22 @@
 import { QueryClient, dehydrate } from "@tanstack/react-query";
-import MoviePage from "../components/MoviePage";
-import { getMovie } from "../hooks/useMovie";
-import { GET_MOVIES_KEY } from "../hooks/useMovies";
+import Movie from "../components/Movie";
+import { GET_MOVIE_KEY, getMovie } from "../hooks/useMovie";
+import { IPageProps } from "../movies/[id]/page";
 import Hydrate from "../providers/Hydrate";
 
-export default async function MovieWrapper() {
+export default async function MovieWrapper({ params }: IPageProps) {
   const queryClient = new QueryClient();
 
-  await queryClient.prefetchQuery(GET_MOVIES_KEY, getMovie);
+  await queryClient.prefetchQuery({
+    queryKey: [GET_MOVIE_KEY, params.id],
+    queryFn: getMovie,
+  });
   const dehydratedState = dehydrate(queryClient);
+  console.log("called ", params.id);
 
   return (
     <Hydrate state={dehydratedState}>
-      <MoviePage />
+      <Movie id={params.id} />
     </Hydrate>
   );
 }
