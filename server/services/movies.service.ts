@@ -2,6 +2,7 @@ import { getDatabase } from "../clients/database";
 import { IGetMoviesQueryParams } from "../controllers/movies.controller";
 import { IMovie } from "../models/models";
 
+// TODO: don't do sorting in-memory, do in database
 export async function getMovies({
   page = 1,
   limit = 10,
@@ -9,24 +10,31 @@ export async function getMovies({
 }: IGetMoviesQueryParams) {
   try {
     const { movieCollection } = await getDatabase();
-    let sortedMovies: IMovie[] = [];
+    let movies: IMovie[] = [];
 
     if (movieCollection) {
-      let query = movieCollection.find();
+      const regexp = new RegExp(`.*${search}.*`, "i");
+      console.log(regexp);
 
-      if (search) {
-        query = query.where("title").regex(new RegExp(search, "i"));
-      }
-
-      const skip = (page - 1) * limit;
-      sortedMovies = await query
-        .sort({ averageRating: "desc" })
-        .limit(limit)
-        .skip(skip)
+      movies = await movieCollection
+        .find({
+          selector: {
+            title: { $regex: regexp },
+          },
+        })
         .exec();
-    }
 
-    return sortedMovies;
+      const test = await movies;
+      console.log(test);
+
+      const start = (page - 1) * limit;
+      const sortedMovies = movies.sort(
+        (a, b) => Number(b.averageRating) - Number(a.averageRating)
+      );
+
+      return sortedMovies;
+    }
+    return movies;
   } catch (error) {
     console.log("error ", error);
   }
