@@ -10,15 +10,18 @@ interface IMovieDetailsProps {
   averageRating: string;
   src: string;
   alt: string;
+  placeholderSrc: string;
   onSubmit: (rating: string) => void;
 }
 
 const MovieDetails = (props: IMovieDetailsProps) => {
+  console.log(props.placeholderSrc);
   return (
     <>
       <MovieImage
         src={props.src}
         alt={props.alt}
+        placeholderSrc={props.placeholderSrc}
         className="relative w-full h-96"
       />
       <h2 className="text-3xl text-white mt-4">{props.title}</h2>

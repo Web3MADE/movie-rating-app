@@ -43,7 +43,8 @@ const Movie = ({ id }: IMovieProps) => {
         {movie && (
           <MovieDetails
             src={movie.posterUrl}
-            alt={""}
+            placeholderSrc="/rakbankimg.jpeg"
+            alt={movie.alt}
             genre={movie.genres[0]}
             releaseDate={movie.year}
             averageRating={movie.averageRating}
