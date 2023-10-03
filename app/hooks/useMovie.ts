@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 export const GET_MOVIE_KEY = ["GET_MOVIE"];
 export const getMovie = async ({ queryKey }: { queryKey: any }) => {
   const [_key, id] = queryKey;
-  const res = await fetch(`http://localhost:9000/movies?id=${id}`);
+  const res = await fetch(`http://localhost:9000/movies/${id}`);
 
   return res.json();
 };
