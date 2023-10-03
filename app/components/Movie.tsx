@@ -2,6 +2,7 @@
 import { useRouter } from "next/navigation";
 import useMovie from "../hooks/useMovie";
 import useRating from "../hooks/useRating";
+import { PLACEHOLDER_IMG } from "../utils/constants";
 import MovieDetails from "./MovieDetails";
 import NavigateBack from "./NavigateBack";
 
@@ -43,7 +44,7 @@ const Movie = ({ id }: IMovieProps) => {
         {movie && (
           <MovieDetails
             src={movie.posterUrl}
-            placeholderSrc="/rakbankimg.jpeg"
+            placeholderSrc={PLACEHOLDER_IMG}
             alt={movie.alt}
             genre={movie.genres[0]}
             releaseDate={movie.year}

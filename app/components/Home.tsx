@@ -2,6 +2,7 @@
 import { IMovie } from "@/server/models/models";
 import { useState } from "react";
 import useMovies from "../hooks/useMovies";
+import { PLACEHOLDER_IMG } from "../utils/constants";
 import MovieCard from "./MovieCard";
 import SearchBar from "./SearchBar";
 
@@ -37,9 +38,10 @@ const Home = () => {
               key={movie.id}
               id={movie.id}
               thumbnailSrc={movie.posterUrl}
+              placeholderSrc={PLACEHOLDER_IMG}
               thumbnailClassName="relative h-32 w-32"
               title={movie.title}
-              averageRating={movie.rating}
+              averageRating={movie.averageRating}
             />
           ))}
       </div>

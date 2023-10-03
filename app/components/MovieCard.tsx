@@ -5,6 +5,7 @@ import Thumbnail from "./MovieImage";
 interface IMovieProps {
   id: string;
   thumbnailSrc: string;
+  placeholderSrc: string;
   thumbnailClassName: string;
   title: string;
   averageRating: string;
@@ -15,6 +16,7 @@ const MovieCard = (props: IMovieProps) => {
     <div className="">
       <Thumbnail
         src={props.thumbnailSrc}
+        placeholderSrc={props.placeholderSrc}
         alt={props.title}
         className={props.thumbnailClassName}
       />
