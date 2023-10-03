@@ -1,25 +1,27 @@
 import { useQuery } from "@tanstack/react-query";
+import { IHomeWrapperProps } from "../wrappers/HomeWrapper";
 
 // TODO: set API URL + include /api in url, in next config
 export const GET_MOVIES_KEY = ["GET_MOVIES"];
 export const getMovies = async ({ queryKey }: { queryKey: any }) => {
-  const [_key, page, limit] = queryKey;
+  const [_key, page, limit, search] = queryKey;
 
   const url = new URL(`http://localhost:9000/movies`);
   if (page !== undefined) url.searchParams.append("page", page.toString());
   if (limit !== undefined) url.searchParams.append("limit", limit.toString());
+  if (search !== undefined) url.searchParams.append("search", search);
 
   const res = await fetch(url.toString());
 
   return res.json();
 };
 
-export default function useMovies(page?: number, limit?: number) {
+export default function useMovies({ page, limit, search }: IHomeWrapperProps) {
   const {
     data: movies,
     isError,
     isLoading,
-  } = useQuery([GET_MOVIES_KEY, page, limit], getMovies, {
+  } = useQuery([GET_MOVIES_KEY, page, limit, search], getMovies, {
     refetchOnWindowFocus: false,
   });
   return { movies, isError, isLoading };

@@ -3,6 +3,7 @@ import { IMovie } from "@/server/models/models";
 import { useState } from "react";
 import useMovies from "../hooks/useMovies";
 import { PLACEHOLDER_IMG } from "../utils/constants";
+import { IHomeWrapperProps } from "../wrappers/HomeWrapper";
 import MovieCard from "./MovieCard";
 import SearchBar from "./SearchBar";
 
@@ -12,8 +13,12 @@ import SearchBar from "./SearchBar";
 // 4. add tanstack query
 // 5. filter results via search bar
 
-const Home = () => {
-  const { movies, isError, isLoading } = useMovies();
+const Home = (props: IHomeWrapperProps) => {
+  const { movies, isError, isLoading } = useMovies({
+    page: props.page,
+    limit: props.limit,
+    search: props.search,
+  });
 
   const [results, setResults] = useState([]);
 

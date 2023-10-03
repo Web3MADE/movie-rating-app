@@ -2,9 +2,10 @@ import { Controller, Get, Path, Queries, Route } from "tsoa";
 import { IMovie } from "../models/models";
 import { getMovie, getMovies } from "../services/movies.service";
 
-interface IGetMoviesQueryParams {
+export interface IGetMoviesQueryParams {
   page?: number;
   limit?: number;
+  search?: string;
 }
 @Route("movies")
 export class MoviesController extends Controller {

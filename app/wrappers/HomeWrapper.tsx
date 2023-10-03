@@ -4,7 +4,7 @@ import Home from "../components/Home";
 import { GET_MOVIES_KEY, getMovies } from "../hooks/useMovies";
 import Hydrate from "../providers/Hydrate";
 
-interface IHomeWrapperProps {
+export interface IHomeWrapperProps {
   page: number;
   limit: number;
   search?: string;
@@ -22,7 +22,7 @@ export default async function HomeWrapper({
 
   return (
     <Hydrate state={dehydratedState}>
-      <Home />
+      <Home page={page} limit={limit} search={search} />
     </Hydrate>
   );
 }
