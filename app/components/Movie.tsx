@@ -46,7 +46,7 @@ const Movie = ({ id }: IMovieProps) => {
             alt={""}
             genre={movie.genres[0]}
             releaseDate={movie.year}
-            averageRating={movie.rating}
+            averageRating={movie.averageRating}
             description={movie.plot}
             title={movie.title}
             onSubmit={handleSubmit}

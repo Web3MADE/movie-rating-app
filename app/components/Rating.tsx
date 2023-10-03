@@ -2,12 +2,12 @@
 import { useState } from "react";
 
 interface IRatingProps {
-  rating: string;
+  averageRating: string;
   onSubmit: (rating: string) => void;
 }
 
 const Rating = (props: IRatingProps) => {
-  const [rating, setRating] = useState(props.rating);
+  const [rating, setRating] = useState(props.averageRating);
 
   function handleRating(star: number) {
     setRating(star.toString());

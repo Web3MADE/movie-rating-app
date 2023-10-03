@@ -27,7 +27,7 @@ const MovieDetails = (props: IMovieDetailsProps) => {
       <p className="text-xl text-white">
         Average Rating: {props.averageRating}
       </p>
-      <Rating rating={props.averageRating} onSubmit={props.onSubmit} />
+      <Rating averageRating={props.averageRating} onSubmit={props.onSubmit} />
     </>
   );
 };
