@@ -9,7 +9,6 @@ export default async function HomeWrapper() {
 
   await queryClient.prefetchQuery(GET_MOVIES_KEY, getMovies);
   const dehydratedState = dehydrate(queryClient);
-  console.log("called ");
 
   return (
     <Hydrate state={dehydratedState}>

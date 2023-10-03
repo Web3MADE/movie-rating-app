@@ -12,7 +12,6 @@ export default async function MovieWrapper({ params }: IPageProps) {
     queryFn: getMovie,
   });
   const dehydratedState = dehydrate(queryClient);
-  console.log("called ", params.id);
 
   return (
     <Hydrate state={dehydratedState}>
