@@ -2,17 +2,11 @@
 import { IMovie } from "@/server/models/models";
 import clsx from "clsx";
 import Link from "next/link";
-import { useState } from "react";
 import useMovies from "../hooks/useMovies";
 import { PLACEHOLDER_IMG } from "../utils/constants";
 import { IHomeWrapperProps } from "../wrappers/HomeWrapper";
 import MovieCard from "./MovieCard";
 import SearchBar from "./SearchBar";
-// 1. setup HMTL
-// 2. basic styling
-// 3. add search bar
-// 4. add tanstack query
-// 5. filter results via search bar
 
 const Home = (props: IHomeWrapperProps) => {
   const { movies, isError, isLoading } = useMovies({
@@ -21,17 +15,9 @@ const Home = (props: IHomeWrapperProps) => {
     search: props.search,
   });
 
-  const [results, setResults] = useState([]);
-
-  function handleResults(results: string) {
-    // filter results
-  }
-
   if (isLoading) return <div>Loading...</div>;
 
   if (isError) return <div>Error loading data</div>;
-
-  console.log(props.page);
 
   return (
     <main className="flex min-h-screen flex-col items-center p-24 gap-4">

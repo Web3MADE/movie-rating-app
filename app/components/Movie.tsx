@@ -10,17 +10,17 @@ interface IMovieProps {
   id: string;
 }
 
-const Movie = ({ id }: IMovieProps) => {
+const Movie = (props: IMovieProps) => {
   const {
     movie,
     isError: isMovieError,
     isLoading: isMovieLoading,
-  } = useMovie(id);
+  } = useMovie(props.id);
   const {
     rate,
     isError: isRatingError,
     isLoading: isLoadingError,
-  } = useRating(id);
+  } = useRating(props.id);
   const router = useRouter();
 
   function handleNavigateBack() {
@@ -28,7 +28,7 @@ const Movie = ({ id }: IMovieProps) => {
   }
 
   function handleSubmit(newRating: string) {
-    rate(id, newRating);
+    rate(props.id, newRating);
   }
 
   if (isMovieLoading) return <div>Loading...</div>;
