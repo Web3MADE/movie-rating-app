@@ -28,9 +28,9 @@ export async function getMovies({
       console.log(test);
 
       const start = (page - 1) * limit;
-      const sortedMovies = movies.sort(
-        (a, b) => Number(b.averageRating) - Number(a.averageRating)
-      );
+      const sortedMovies = movies
+        .sort((a, b) => Number(b.averageRating) - Number(a.averageRating))
+        .slice(start, Math.min(start + limit, movies.length));
 
       return sortedMovies;
     }
