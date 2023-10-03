@@ -15,7 +15,6 @@ interface IMovieDetailsProps {
 }
 
 const MovieDetails = (props: IMovieDetailsProps) => {
-  console.log(props.placeholderSrc);
   return (
     <>
       <MovieImage

@@ -20,7 +20,6 @@ const MovieImage = (props: IMovieImageProps) => {
   const handleError = () => {
     setCurrentSrc(props.placeholderSrc);
   };
-  console.log(props.placeholderSrc);
   return (
     <div className={props.className}>
       <Image

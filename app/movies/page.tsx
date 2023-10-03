@@ -11,6 +11,5 @@ export default async function page({ searchParams }: IHomePageProps) {
     typeof searchParams.limit === "string" ? Number(searchParams.limit) : 10;
   const search =
     typeof searchParams.search === "string" ? searchParams.search : undefined;
-  console.log("searchParams ", page, limit, search);
   return <HomeWrapper page={page} limit={limit} search={search} />;
 }
