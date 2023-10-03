@@ -39,7 +39,13 @@ export const movieSchema: RxJsonSchema<IMovie> = {
     posterUrl: {
       type: "string",
     },
-    rating: {
+    ratings: {
+      type: "array",
+      items: {
+        type: "string",
+      },
+    },
+    averageRating: {
       type: "string",
     },
   },
@@ -53,6 +59,7 @@ export const movieSchema: RxJsonSchema<IMovie> = {
     "actors",
     "plot",
     "posterUrl",
-    "rating",
+    "ratings",
+    "averageRating",
   ],
 };

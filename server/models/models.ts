@@ -1,6 +1,7 @@
 export interface IMovie {
   id: string;
-  rating: string;
+  ratings: string[];
+  averageRating: string;
   title: string;
   year: string;
   runtime: string;

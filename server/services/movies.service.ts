@@ -15,7 +15,7 @@ export async function getMovies({ page = 1, limit = 10 }: IGetMoviesProps) {
       const skip = (page - 1) * limit;
       sortedMovies = await movieCollection
         .find()
-        .sort({ rating: "desc" })
+        .sort({ averageRating: "desc" })
         .limit(limit)
         .skip(skip)
         .exec();
