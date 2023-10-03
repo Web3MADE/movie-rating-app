@@ -24,9 +24,6 @@ export async function getMovies({
         })
         .exec();
 
-      const test = await movies;
-      console.log(test);
-
       const start = (page - 1) * limit;
       const sortedMovies = movies
         .sort((a, b) => Number(b.averageRating) - Number(a.averageRating))
