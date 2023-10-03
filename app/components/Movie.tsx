@@ -22,8 +22,6 @@ const Movie = ({ id }: IMovieProps) => {
   } = useRating();
   const router = useRouter();
 
-  console.log(movie);
-
   function handleNavigateBack() {
     router.back();
   }

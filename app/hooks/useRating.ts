@@ -5,7 +5,6 @@ interface IRateMovie {
   rating: string;
 }
 
-export const RATE_MOVIE_KEY = ["RATE_MOVIE"];
 export const rateMovie = async ({ id, rating }: IRateMovie) => {
   const res = await fetch(`http://localhost:9000/ratings/${id}`, {
     method: "PUT",
