@@ -1,53 +1,56 @@
 "use client";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { ChangeEvent, FormEvent, useEffect, useState } from "react";
-import { useDebounce } from "use-debounce";
+import { useRouter } from "next/navigation";
+import { ChangeEvent, FormEvent, MouseEvent, useState } from "react";
 import SearchIcon from "./SearchIcon";
 
 interface ISearchBarProps {
   search?: string;
 }
 
-// TODO: reimplement submbit button for better UX
 const SearchBar = (props: ISearchBarProps) => {
   const router = useRouter();
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
 
   const [text, setText] = useState(props.search);
-  const [query] = useDebounce(text, 500);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setText(event.target.value);
   };
 
-  const handleSearch = (event: FormEvent<HTMLFormElement>) => {
+  const handleSearch = (
+    event: FormEvent<HTMLFormElement> | MouseEvent<HTMLButtonElement>
+  ) => {
     event.preventDefault();
-    router.push(`/movies?search=${query}`);
+    if (!text) {
+      router.push("/movies");
+    } else {
+      router.push(`/movies?search=${text}`);
+    }
   };
 
-  useEffect(() => {
-    if (query === undefined) return;
-    if (!query) {
-      if (pathname !== "/movies" || searchParams) {
-        router.push("/movies");
-      }
-    } else {
-      router.push(`/movies?search=${query}`);
-    }
-  }, [query, router, pathname]);
-
   return (
-    <div className="flex items-center border-b-2 border-teal-500 py-2">
-      <SearchIcon />
-      <input
-        className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
-        type="text"
-        placeholder="Search"
-        value={text}
-        onChange={handleChange}
-      />
-    </div>
+    <form
+      onSubmit={handleSearch}
+      className="w-full max-w-sm mx-auto"
+      aria-label="form"
+    >
+      <div className="flex items-center border-b-2 border-teal-500 py-2">
+        <SearchIcon />
+        <input
+          className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
+          type="text"
+          placeholder="Search"
+          value={text}
+          onChange={handleChange}
+        />
+        <button
+          className="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded"
+          type="submit"
+          onClick={handleSearch}
+        >
+          Search
+        </button>
+      </div>
+    </form>
   );
 };
 
