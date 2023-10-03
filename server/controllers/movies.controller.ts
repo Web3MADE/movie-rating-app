@@ -1,14 +1,19 @@
-import { Controller, Get, Path, Route } from "tsoa";
+import { Controller, Get, Path, Queries, Route } from "tsoa";
 import { IMovie } from "../models/models";
 import { getMovie, getMovies } from "../services/movies.service";
 
-// TODO: fix query param decorator error
+interface IGetMoviesQueryParams {
+  page?: number;
+  limit?: number;
+}
 @Route("movies")
 export class MoviesController extends Controller {
   @Get()
-  public async getMovies(): Promise<IMovie[] | undefined> {
+  public async getMovies(
+    @Queries() queryParams: IGetMoviesQueryParams
+  ): Promise<IMovie[] | undefined> {
     try {
-      return getMovies({ page: 1, limit: 10 });
+      return getMovies(queryParams);
     } catch (error) {
       this.setStatus(500);
       console.error("Caught error", error);

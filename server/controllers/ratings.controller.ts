@@ -1,7 +1,6 @@
 import { Body, Controller, Path, Put, Route } from "tsoa";
 import { rateMovie } from "../services/ratings.service";
 
-// TODO: fix 400 error
 @Route("ratings")
 export class RatingsController extends Controller {
   @Put("{id}")

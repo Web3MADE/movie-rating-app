@@ -6,7 +6,7 @@ import Hydrate from "../providers/Hydrate";
 
 export default async function MovieWrapper({ params }: IPageProps) {
   const queryClient = new QueryClient();
-
+  // TODO: consistent code
   await queryClient.prefetchQuery({
     queryKey: [GET_MOVIE_KEY, params.id],
     queryFn: getMovie,
