@@ -1,6 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 import useMovie from "../hooks/useMovie";
+import useRating from "../hooks/useRating";
 import MovieDetails from "./MovieDetails";
 import NavigateBack from "./NavigateBack";
 
@@ -9,7 +10,16 @@ interface IMovieProps {
 }
 
 const Movie = ({ id }: IMovieProps) => {
-  const { movie, isError, isLoading } = useMovie(id);
+  const {
+    movie,
+    isError: isMovieError,
+    isLoading: isMovieLoading,
+  } = useMovie(id);
+  const {
+    rate,
+    isError: isRatingError,
+    isLoading: isLoadingError,
+  } = useRating();
   const router = useRouter();
 
   console.log(movie);
@@ -18,11 +28,13 @@ const Movie = ({ id }: IMovieProps) => {
     router.back();
   }
 
-  async function handleSubmit(newRating: string) {}
+  function handleSubmit(newRating: string) {
+    rate(id, newRating);
+  }
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isMovieLoading) return <div>Loading...</div>;
 
-  if (isError) return <div>Error loading data</div>;
+  if (isMovieError) return <div>Error loading data</div>;
 
   return (
     <main className="flex min-h-screen flex-col items-center p-4">
