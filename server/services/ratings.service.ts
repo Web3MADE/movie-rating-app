@@ -20,13 +20,13 @@ export async function rateMovie(
   }
 }
 
-function calculateAverageRating(ratings: string[]): string {
+export function calculateAverageRating(ratings: string[]): string {
   if (ratings.length === 0) return "0";
   const sum = ratings.reduce((acc, rating) => acc + parseFloat(rating), 0);
   return (sum / ratings.length).toFixed(1);
 }
 
-function updateAverageRating(movie: IMovie, newRating: string): IMovie {
+export function updateAverageRating(movie: IMovie, newRating: string): IMovie {
   movie.ratings.push(newRating);
   movie.averageRating = calculateAverageRating(movie.ratings);
 
