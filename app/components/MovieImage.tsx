@@ -29,6 +29,7 @@ const MovieImage = (props: IMovieImageProps) => {
         objectFit="cover"
         onClick={props.onClick}
         onError={handleError}
+        className="rounded"
       />
     </div>
   );
