@@ -2,8 +2,17 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+First, install dependencies at the root directory level:
 
+```bash
+npm i
+# or
+yarn install
+# or
+pnpm i
+```
+
+Then, start the frontend application:
 ```bash
 npm run dev
 # or
@@ -14,7 +23,11 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+In another terminal, navigate to /server, and install dependencies as before. Once installed, start the server as before.
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the frontend.
+Open [http://localhost:9000](http://localhost:9000/docs) with your browser to see the swagger UI.
+
 
 # Frontend Documentation
 
