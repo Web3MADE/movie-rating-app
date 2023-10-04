@@ -14,8 +14,8 @@ const Rating = (props: IRatingProps) => {
   }
 
   return (
-    <div className="flex flex-col items-center mt-2">
-      <div className="flex">
+    <div className="flex gap-3 flex-col items-center mt-2">
+      <div className="flex gap-2">
         {[1, 2, 3, 4, 5].map((star) => (
           <span
             key={star}
@@ -30,7 +30,12 @@ const Rating = (props: IRatingProps) => {
         ))}
       </div>
 
-      <button onClick={() => props.onSubmit(rating.toString())}>Submit</button>
+      <button
+        onClick={() => props.onSubmit(rating.toString())}
+        className="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded"
+      >
+        Submit
+      </button>
     </div>
   );
 };

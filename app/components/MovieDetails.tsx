@@ -23,12 +23,18 @@ const MovieDetails = (props: IMovieDetailsProps) => {
         placeholderSrc={props.placeholderSrc}
         className="relative w-full h-96"
       />
-      <h2 className="text-3xl text-white mt-4">{props.title}</h2>
-      <p className="text-lg text-white">{props.genre}</p>
-      <p className="text-sm text-white mb-4">{props.releaseDate}</p>
-      <p className="text-xl text-white">
-        Average Rating: {props.averageRating}
+      <h2 className="text-4xl text-white mt-4 font-extrabold">{props.title}</h2>
+      <p className="text-lg text-white mt-2 font-medium italic">
+        {props.genre}
       </p>
+      <p className="text-sm text-gray-400 mt-1">{props.releaseDate}</p>
+      <p className="text-xl text-teal-500 mt-2">
+        Average Rating:{" "}
+        <span className="text-xl text-white font-bold">
+          {props.averageRating}
+        </span>
+      </p>
+
       <Rating averageRating={props.averageRating} onSubmit={props.onSubmit} />
     </>
   );

@@ -26,7 +26,7 @@ const MovieImage = (props: IMovieImageProps) => {
         src={currentSrc}
         alt={props.alt}
         fill
-        objectFit="contain"
+        objectFit="cover"
         onClick={props.onClick}
         onError={handleError}
       />

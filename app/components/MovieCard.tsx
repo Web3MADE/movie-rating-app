@@ -20,9 +20,14 @@ const MovieCard = (props: IMovieProps) => {
         alt={props.title}
         className={props.thumbnailClassName}
       />
-      <h3>{props.title}</h3>
-      <p>Average Rating: {props.averageRating}</p>
-      <Link href={`/movies/${props.id}`}>View Details</Link>
+      <h3 className="text-white font-bold text-2xl">{props.title}</h3>
+      <p className="text-gray-500">Average Rating: {props.averageRating}</p>
+      <Link
+        href={`/movies/${props.id}`}
+        className="text-teal-500 hover:text-teal-700 underline"
+      >
+        View Details
+      </Link>
     </div>
   );
 };
