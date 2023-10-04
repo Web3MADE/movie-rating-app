@@ -1,14 +1,16 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import MovieCard from "./MovieCard";
+import MovieCard, { IMovieCardProps } from "./MovieCard";
 
 describe("Movie Component", () => {
   const mockOnClick = jest.fn();
 
-  const movieProps = {
+  const movieProps: IMovieCardProps = {
     thumbnailSrc: "/path-to-thumbnail",
     title: "Inception",
-    averageRating: 4.5,
-    onClick: mockOnClick,
+    averageRating: "4.5",
+    placeholderSrc: "/rakbankimg.jpeg",
+    thumbnailClassName: "thumbnail-class",
+    id: "1",
   };
 
   beforeEach(() => {

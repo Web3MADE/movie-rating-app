@@ -2,11 +2,11 @@
 import { IMovie } from "@/server/models/models";
 import clsx from "clsx";
 import Link from "next/link";
-import useMovies from "../hooks/useMovies";
-import { PLACEHOLDER_IMG } from "../utils/constants";
-import { IHomeWrapperProps } from "../wrappers/HomeWrapper";
-import MovieCard from "./MovieCard";
-import SearchBar from "./SearchBar";
+import useMovies from "../../hooks/useMovies";
+import { PLACEHOLDER_IMG } from "../../utils/constants";
+import { IHomeWrapperProps } from "../../wrappers/HomeWrapper";
+import MovieCard from "../movie/MovieCard";
+import SearchBar from "../search/SearchBar";
 
 const Home = (props: IHomeWrapperProps) => {
   const { movies, isError, isLoading } = useMovies({

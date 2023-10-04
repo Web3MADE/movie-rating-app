@@ -1,27 +1,28 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import Thumbnail from "./MovieImage";
+import MovieImage, { IMovieImageProps } from "./MovieImage";
 
-describe("Thumbnail Component", () => {
+describe("MovieImage Component", () => {
   const mockOnClick = jest.fn();
 
-  const thumbnailProps = {
+  const movieImageProps: IMovieImageProps = {
     src: "/path-to-image",
     alt: "Test Alt Text",
+    placeholderSrc: "/rakbankimg.jpeg",
     onClick: mockOnClick,
   };
 
   beforeEach(() => {
-    render(<Thumbnail {...thumbnailProps} />);
+    render(<MovieImage {...movieImageProps} />);
   });
 
   it("should render Image with correct src", () => {
     const imgElement = screen.getByRole("img") as HTMLImageElement;
     const decodedSrc = decodeURIComponent(imgElement.src);
-    expect(decodedSrc).toContain(thumbnailProps.src);
+    expect(decodedSrc).toContain(movieImageProps.src);
   });
 
   it("should render Image with correct alt text", () => {
-    const imgElement = screen.getByAltText(thumbnailProps.alt);
+    const imgElement = screen.getByAltText(movieImageProps.alt);
     expect(imgElement).toBeInTheDocument();
   });
 

@@ -1,10 +1,10 @@
 "use client";
 import { useRouter } from "next/navigation";
-import useMovie from "../hooks/useMovie";
-import useRating from "../hooks/useRating";
-import { PLACEHOLDER_IMG } from "../utils/constants";
-import MovieDetails from "./MovieDetails";
-import NavigateBack from "./NavigateBack";
+import useMovie from "../../hooks/useMovie";
+import useRating from "../../hooks/useRating";
+import { PLACEHOLDER_IMG } from "../../utils/constants";
+import MovieDetails from "../movie/MovieDetails";
+import NavigateBack from "../search/NavigateBack";
 
 interface IMovieProps {
   id: string;

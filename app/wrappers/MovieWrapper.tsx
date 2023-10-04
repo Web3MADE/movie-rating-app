@@ -1,5 +1,5 @@
 import { QueryClient, dehydrate } from "@tanstack/react-query";
-import Movie from "../components/Movie";
+import Movie from "../components/pages/Movie";
 import { GET_MOVIE_KEY, getMovie } from "../hooks/useMovie";
 import { IPageProps } from "../movies/[id]/page";
 import Hydrate from "../providers/Hydrate";

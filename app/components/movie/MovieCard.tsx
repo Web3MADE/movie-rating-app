@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Thumbnail from "./MovieImage";
 
-interface IMovieProps {
+export interface IMovieCardProps {
   id: string;
   thumbnailSrc: string;
   placeholderSrc: string;
@@ -11,7 +11,7 @@ interface IMovieProps {
   averageRating: string;
 }
 
-const MovieCard = (props: IMovieProps) => {
+const MovieCard = (props: IMovieCardProps) => {
   return (
     <div className="">
       <Thumbnail

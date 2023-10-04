@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-interface IMovieImageProps {
+export interface IMovieImageProps {
   src: string;
   alt: string;
   placeholderSrc: string;
