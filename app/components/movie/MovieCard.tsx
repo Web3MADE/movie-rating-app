@@ -8,6 +8,7 @@ export interface IMovieCardProps {
   placeholderSrc: string;
   thumbnailClassName: string;
   title: string;
+  objectFit: "contain" | "cover";
   averageRating: string;
 }
 
@@ -18,6 +19,7 @@ const MovieCard = (props: IMovieCardProps) => {
         src={props.thumbnailSrc}
         placeholderSrc={props.placeholderSrc}
         alt={props.title}
+        objectFit={props.objectFit}
         className={props.thumbnailClassName}
       />
       <h3 className="text-white font-bold text-2xl">{props.title}</h3>

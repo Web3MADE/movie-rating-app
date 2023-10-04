@@ -11,6 +11,7 @@ interface IMovieDetailsProps {
   src: string;
   alt: string;
   placeholderSrc: string;
+  objectFit: "contain" | "cover";
   onSubmit: (rating: string) => void;
 }
 
@@ -21,6 +22,7 @@ const MovieDetails = (props: IMovieDetailsProps) => {
         src={props.src}
         alt={props.alt}
         placeholderSrc={props.placeholderSrc}
+        objectFit={props.objectFit}
         className="relative w-full h-96"
       />
       <h2 className="text-4xl text-white mt-4 font-extrabold">{props.title}</h2>

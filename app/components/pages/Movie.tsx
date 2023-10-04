@@ -32,7 +32,7 @@ const Movie = (props: IMovieProps) => {
       <div className="mr-auto">
         <NavigateBack onClick={handleNavigateBack} />
       </div>
-      <div>
+      <div className="max-w-64">
         {movie && (
           <MovieDetails
             src={movie.posterUrl}
@@ -43,6 +43,7 @@ const Movie = (props: IMovieProps) => {
             averageRating={movie.averageRating}
             description={movie.plot}
             title={movie.title}
+            objectFit={"contain"}
             onSubmit={handleSubmit}
           />
         )}

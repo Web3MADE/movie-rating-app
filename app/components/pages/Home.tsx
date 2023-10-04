@@ -67,6 +67,7 @@ const Home = (props: IHomeWrapperProps) => {
               placeholderSrc={PLACEHOLDER_IMG}
               thumbnailClassName="relative h-40 w-40 "
               title={movie.title}
+              objectFit={"cover"}
               averageRating={movie.averageRating}
             />
           ))}

@@ -7,6 +7,7 @@ export interface IMovieImageProps {
   alt: string;
   placeholderSrc: string;
   className?: string;
+  objectFit: "contain" | "cover";
   onClick?: () => void;
 }
 
@@ -26,7 +27,7 @@ const MovieImage = (props: IMovieImageProps) => {
         src={currentSrc}
         alt={props.alt}
         fill
-        objectFit="cover"
+        objectFit={props.objectFit}
         onClick={props.onClick}
         onError={handleError}
         className="rounded"
