@@ -1,5 +1,6 @@
-// 1. create server
-// 2. generate routes with tsoa
+/**
+ * @notice This is the main entrypoint to the server
+ */
 import bodyParser from "body-parser";
 import cors from "cors";
 import express from "express";
