@@ -1,57 +1,31 @@
-import { getDatabase } from "../clients/database";
 import { IGetMoviesQueryParams } from "../controllers/movies.controller";
-import { IMovie } from "../models/models";
+import { findMovies, findOneMovie } from "../repositories/movies.repository";
+import { DEFAULT_LIMIT, DEFAULT_PAGE } from "../utils/constants";
 
 export async function getMovies({
-  page = 1,
-  limit = 10,
+  page = DEFAULT_PAGE,
+  limit = DEFAULT_LIMIT,
   search = "",
 }: IGetMoviesQueryParams) {
   try {
-    const { movieCollection } = await getDatabase();
-    let movies: IMovie[] = [];
-
-    if (movieCollection) {
-      const regexp = new RegExp(`.*${search}.*`, "i");
-
-      movies = await movieCollection
-        .find({
-          selector: {
-            title: { $regex: regexp },
-          },
-        })
-        .exec();
-
-      const start = (page - 1) * limit;
-      const sortedMovies = movies
-        .sort((a, b) => Number(b.averageRating) - Number(a.averageRating))
-        .slice(start, Math.min(start + limit, movies.length));
-
-      return sortedMovies;
-    }
-    return movies;
+    const regexp = new RegExp(`.*${search}.*`, "i");
+    const movies = await findMovies({ title: { $regex: regexp } });
+    const start = (page - 1) * limit;
+    const sortedMovies = movies
+      .sort((a, b) => Number(b.averageRating) - Number(a.averageRating))
+      .slice(start, start + limit);
+    return sortedMovies;
   } catch (error) {
-    console.log("error ", error);
+    console.error("error ", error);
+    throw error;
   }
 }
 
 export async function getMovie(id: string) {
   try {
-    const { movieCollection } = await getDatabase();
-    let movie: IMovie | null = null;
-
-    if (movieCollection) {
-      movie = await movieCollection
-        .findOne({
-          selector: {
-            id: id,
-          },
-        })
-        .exec();
-    }
-
-    return movie;
+    return await findOneMovie({ id });
   } catch (error) {
-    console.log("error ", error);
+    console.error("error ", error);
+    throw error;
   }
 }
