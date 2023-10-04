@@ -3,6 +3,12 @@ import { rateMovie } from "../services/ratings.service";
 
 @Route("ratings")
 export class RatingsController extends Controller {
+  /**
+   * Upsert movie rating, based on its id
+   * The averageRating field is updated on the movie document
+   * @param id existing movie id
+   * @param body new rating value
+   */
   @Put("{id}")
   public async rateMovie(
     @Path() id: string,

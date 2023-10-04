@@ -16,6 +16,13 @@ export const getMovies = async ({ queryKey }: { queryKey: any }) => {
   return res.json();
 };
 
+/**
+ * Fetch Movies with paginated params. Search ignores page and limit params
+ * contains queryKey to refetch cached data
+ * @param page page number
+ * @param limit limit movies per page
+ * @param search search query from url
+ */
 export default function useMovies({ page, limit, search }: IHomeWrapperProps) {
   const {
     data: movies,

@@ -8,6 +8,11 @@ export const getMovie = async ({ queryKey }: { queryKey: any }) => {
   return res.json();
 };
 
+/**
+ * Fetch Movie by Id (primary key)
+ * contains queryKey to refetch cached data
+ * @param id existing movie id
+ */
 export default function useMovie(id: string) {
   const {
     data: movie,

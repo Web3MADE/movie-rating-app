@@ -1,6 +1,7 @@
 import { IMovie } from "../models/models";
 import { findMovieById, upsertMovie } from "../repositories/ratings.repository";
 
+/**@notice rateMovie by id, update the averageRating field, and upsert in database */
 export async function rateMovie(
   id: string,
   rating: string

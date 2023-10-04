@@ -15,6 +15,11 @@ export const rateMovie = async ({ id, rating }: IRateMovie) => {
   });
 };
 
+/**
+ * Rate Movie by Id (primary key)
+ * @param id existing movie id
+ * @param rating new rating value
+ */
 export default function useRating(id: string) {
   const queryClient = useQueryClient();
   const mutation = useMutation(rateMovie, {

@@ -10,6 +10,12 @@ export interface IHomeWrapperProps {
   search?: string;
 }
 
+/**
+ * Wraps Home client component with hydrated data
+ * @param page page number
+ * @param limit limit movies per page
+ * @param search search query from url
+ */
 export default async function HomeWrapper({
   page,
   limit,

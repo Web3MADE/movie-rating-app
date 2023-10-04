@@ -9,6 +9,11 @@ export interface IGetMoviesQueryParams {
 }
 @Route("movies")
 export class MoviesController extends Controller {
+  /**
+   * Fetches paginated movies.
+   * pass optional page, limit and search params (default to 10 movies per page).
+   * @param queryParams page, limit and search params
+   */
   @Get()
   public async getMovies(
     @Queries() queryParams: IGetMoviesQueryParams
@@ -21,6 +26,10 @@ export class MoviesController extends Controller {
     }
   }
 
+  /**
+   * Fetch Movie by Id (primary key)
+   * @param id existing movie id
+   */
   @Get("{id}")
   public async getMovie(
     @Path() id: string
