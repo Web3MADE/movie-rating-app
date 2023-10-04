@@ -1,7 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { IHomeWrapperProps } from "../wrappers/HomeWrapper";
 
-// TODO: set API URL + include /api in url, in next config
 export const GET_MOVIES_KEY = ["GET_MOVIES"];
 export const getMovies = async ({ queryKey }: { queryKey: any }) => {
   const [_key, page, limit, search] = queryKey;
