@@ -26,7 +26,8 @@ bun dev
 In another terminal, navigate to /server, and install dependencies as before. Once installed, start the server as before.
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the frontend.
-Open [http://localhost:9000](http://localhost:9000/docs) with your browser to see the swagger UI.
+
+Open [http://localhost:9000/docs](http://localhost:9000/docs) with your browser to see the swagger UI.
 
 
 # Frontend Documentation
