@@ -11,16 +11,8 @@ interface IMovieProps {
 }
 
 const Movie = (props: IMovieProps) => {
-  const {
-    movie,
-    isError: isMovieError,
-    isLoading: isMovieLoading,
-  } = useMovie(props.id);
-  const {
-    rate,
-    isError: isRatingError,
-    isLoading: isLoadingError,
-  } = useRating(props.id);
+  const { movie, isError, isLoading } = useMovie(props.id);
+  const { rate } = useRating(props.id);
   const router = useRouter();
 
   function handleNavigateBack() {
@@ -31,9 +23,9 @@ const Movie = (props: IMovieProps) => {
     rate(props.id, newRating);
   }
 
-  if (isMovieLoading) return <div>Loading...</div>;
+  if (isLoading) return <div>Loading...</div>;
 
-  if (isMovieError) return <div>Error loading data</div>;
+  if (isError) return <div>Error loading data</div>;
 
   return (
     <main className="flex min-h-screen flex-col items-center p-4">

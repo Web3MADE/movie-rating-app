@@ -25,5 +25,5 @@ export default function useRating(id: string) {
     mutation.mutate({ id, rating });
   };
 
-  return { rate, isLoading: mutation.isLoading, isError: mutation.isError };
+  return { rate };
 }

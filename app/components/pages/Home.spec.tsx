@@ -14,6 +14,10 @@ jest.mock("next/navigation", () => ({
 const mockUseMovies = useMovies as jest.MockedFunction<typeof useMovies>;
 
 describe("Home", () => {
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
   it("renders loading state", () => {
     mockUseMovies.mockReturnValue({
       movies: [],

@@ -15,6 +15,10 @@ describe("SearchBar Component", () => {
     (useRouter as jest.Mock).mockReturnValue(mockRouter);
   });
 
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
   it("should render input and button", () => {
     const inputElement = screen.getByPlaceholderText("Search");
     const buttonElement = screen.getByRole("button", { name: /search/i });
