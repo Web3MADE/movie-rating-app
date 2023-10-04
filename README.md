@@ -16,21 +16,66 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Frontend Documentation
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Layout.tsx
+The application is wrapped with `TanstackProvider` to enable dynamic data fetching, both from the server-side and client-side.
 
-## Learn More
+## Tanstack
+Tanstack supports dynamic data fetching and Server-Side Rendering (SSR). The hooks `useMovies`, `useMovie`, and `useRating` are integral to the application, designed to make API calls to the server, fetch movies, or mutate a rating. All hooks utilize the `queryKey` property, facilitating query caching and enhancing data fetching reactivity.
 
-To learn more about Next.js, take a look at the following resources:
+### Custom Hooks:
+- `useMovies`
+- `useMovie`
+- `useRating`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Routes
+The application contains two primary routes within the `app` directory:
+- `/movies`
+- `/movies/:id`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Both routes utilize a Tanstack Hydration wrapper (`Home/MovieWrapper.tsx`), which prefetches movies server-side and hydrates them on the client-side upon retrieval.
 
-## Deploy on Vercel
+### Home Page (`/movies`)
+- The Home page utilizes search parameters, including `page`, `limit`, and `search`.
+- These parameters are passed down to the `HomeWrapper` and then to the client-side `Home` component.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+#### Home.tsx
+This component embodies the structure and logic of the `/movies` page. The `useMovies` hook is triggered upon rendering, responding dynamically to changes in `page`, `limit`, and `search` props.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Movie Page (`/movies/:id`)
+- The `id` parameter of a movie is passed to `MovieWrapper` and eventually to the client-side `Movie` component.
+
+#### Movie.tsx
+This component encompasses the `/movies/:id` page’s JSX structure and logic. It utilizes three hooks for state management: `useMovie`, `useRating`, and `useRouter`.
+
+- `useMovie`: Fetches the selected movie.
+- `useRating`: Executes a PUT request to update the selected movie’s rating.
+- `useRouter`: Manages navigation back to the previous route.
+
+# API
+
+## Initialization
+On initialization within the `/server` directory, the Express server kicks off. Type-safe `tsoa` routes are constructed, generating the `/build` directory and facilitating the creation of Swagger UI documentation based on these routes.
+
+## Database
+The `/clients/database.ts` initializes RxDB, creating a NoSQL in-memory database with a type-safe schema derived from the `data.ts` mock data.
+
+## Controllers
+- `MoviesController.ts`: Manages GET requests for movie data retrieval.
+- `RatingsController.ts`: Handles PUT requests to upsert rating data for specified movies.
+
+## Services & Repositories
+Adhering to the controller-service-repository model, the API ensures enhanced modularity.
+
+### Movies Service (`movies.service.ts`)
+- `getMovies()`: Retrieves and sorts movies by title (if a search parameter is provided) and `averageRating`. It returns a sliced array containing the specified limit to the frontend.
+- `getMovie()`: Retrieves a movie by its ID.
+
+### Repositories
+Functions within the `repositories` directory directly query the database:
+- `findMovies()`: Retrieves movies based on the selector object provided by the `getMovies()` service method.
+- `findOneMovie()`: Retrieves a single movie using the selector object from the `getMovie()` service method.
+- `findByMovieId()`: Finds a movie by its ID, utilized within `ratings.repository.ts` in the `upsertMovie()` method.
+- `upsertMovie()`: Finds and updates a movie by its ID. It creates a copy of the selected movie document, updates it, and upserts the new `updateMovie` object into the database.
+
