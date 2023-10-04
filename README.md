@@ -23,7 +23,18 @@ pnpm dev
 bun dev
 ```
 
-In another terminal, navigate to /server, and install dependencies as before. Once installed, start the server as before.
+In another terminal, navigate to /server, and install dependencies as before. Once installed, run the following command:
+```bash
+npm run build
+# or
+yarn build
+# or
+pnpm build
+# or
+bun build
+```
+
+Once the routes have been built, then start the server as before with the dev script.
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the frontend.
 
